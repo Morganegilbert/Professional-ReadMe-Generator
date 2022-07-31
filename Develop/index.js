@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const markdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 // Questions: Project Title, Description, Table of Contents, 
@@ -69,6 +70,10 @@ inquirer.prompt([
     .toLowerCase()
     .split(' ')
 .join('')}.json`;
+
+fs.writeFile(filename, JSON.stringify(answers, null, '\t'), (err) => 
+err ? console.log(err) : console.log("Success!")
+)
 })
 //What does the user need to know about contributing to the repo?
 
