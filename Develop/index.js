@@ -71,13 +71,12 @@ inquirer.prompt([
     .split(' ')
 .join('')}.json`;
 
+//will call writetoFile function here
 fs.writeFile(filename, JSON.stringify(answers, null, '\t'), (err) => 
 err ? console.log(err) : console.log("Success!")
 )
 })
 //What does the user need to know about contributing to the repo?
-
-const questions = []; // Start with 1 question and get it to work to create a simple ReadMe
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
@@ -85,7 +84,6 @@ function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {}
-//will call writetoFile function here
 
 // .then use the generate Markdown function to create the data to be used in writeToFile
 

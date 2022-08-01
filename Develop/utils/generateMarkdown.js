@@ -15,10 +15,10 @@ function generateMarkdown(data) {
   return `
   # ${data.name}
 
-  # Description
-  ## ${data.description};
+  ## Description
+  ### ${data.description};
   
-  # Table of Contents
+  ## Table of Contents
   * Installation
   * Usage
   * License
@@ -26,25 +26,26 @@ function generateMarkdown(data) {
   * Tests
   * Questions
   
-  # Installation
-  ## To install necessary dependenceies, run the following command:
-  ### ${data.commandInstall};
+  ## Installation
+  ### To install necessary dependenceies, run the following command:
+  * ${data.commandInstall};
 
-  # Usage
-  ## ${data.knowRepo};
+  ## Usage
+  ### ${data.knowRepo};
 
-  # License
-  ##  ${data.license};
+  ## License
+  ###  ${data.license};
 
-  #Contributing
-  ${data.knowRepoContribution};
+  ## Contributing
+  ### Here is what you need to know to contribute to the repo:
+  * ${data.knowRepoContribution};
 
-  # Tests
-  ## To run tests, run the following command: 
-  ## ${data.commandTests};
+  ## Tests
+  ### To run tests, run the following command: 
+  * ${data.commandTests};
 
-  # Questions
-  ## If you have anny questions about the repo, open an issue or contact me directly at email. You can find more of my work at morganegilbert.
+  ## Questions
+  ### If you have anny questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at ${data.github}.
 
 `;
 }
