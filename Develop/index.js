@@ -7,7 +7,7 @@ const markdown = require("./utils/generateMarkdown");
 // Questions: Project Title, Description, Table of Contents, 
 // Installation, Usage, License, Contributing, Tests, and Questions
 
-inquirer.prompt([
+const questions = [
     {
         // What is your GitHub username
         type: "input",
@@ -63,27 +63,29 @@ inquirer.prompt([
         name: "knowRepoContribution",
         message: "What does the user need to know about contributing to the repo?"
     }
-]).then((answers) => {
-    console.log(answers);
-    //Use user feedback for...
-    const filename = `${answers.name
-    .toLowerCase()
-    .split(' ')
-.join('')}.json`;
-
-//will call writetoFile function here
-fs.writeFile(filename, JSON.stringify(answers, null, '\t'), (err) => 
-err ? console.log(err) : console.log("Success!")
-)
-})
-//What does the user need to know about contributing to the repo?
+]
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 // will have fs.method
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+    .then((answers) => {
+        console.log(answers);
+        //Use user feedback for...
+        const filename = `${answers.name
+        .toLowerCase()
+        .split(' ')
+    .join('')}.json`;
+    
+    fs.writeFile(filename, JSON.stringify(answers, null, '\t'), (err) => 
+    err ? console.log(err) : console.log("Success!")
+    )
+    })
+}
+//will call writetoFile function here
 
 // .then use the generate Markdown function to create the data to be used in writeToFile
 
