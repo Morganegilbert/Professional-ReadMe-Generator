@@ -146,8 +146,8 @@ function init() {
         let fileName = "readMe.md";
         let readMeInfo = generateMarkdown(answers);
         let license = answers.license;
+        console.log("what is license", license);
         //Use user feedback for...
-        renderLicenseBadge(license);
         writeToFile(fileName, readMeInfo);
     
     })
