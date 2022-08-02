@@ -144,8 +144,9 @@ function init() {
     .then((answers) => {
         console.log(answers);
         let fileName = "readMe.md";
-        let readMeInfo = generateMarkdown(answers);
-        let license = answers.license;
+        let license = answers.license[0];
+        console.log("This is license in index", license);
+        let readMeInfo = generateMarkdown(answers, license);
         console.log("what is license", license);
         //Use user feedback for...
         writeToFile(fileName, readMeInfo);
