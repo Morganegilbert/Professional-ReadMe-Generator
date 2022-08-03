@@ -69,9 +69,8 @@ const questions = [
         type: "list",
         name: "license",
         message: "What kind of license should your project have?",
-        choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'Mozilla'],
+        choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'Mozilla', 'No License'],
         validate: licenseInput => {
-            console.log("This is my license input", licenseInput);
             if (licenseInput.prompt > 1) {
                     console.log('Only select one license!');
                     return false;
@@ -154,9 +153,7 @@ function init() {
         console.log(answers);
         let fileName = "readMe.md";
         let license = answers.license;
-        console.log("This is license in index", license);
         let readMeInfo = generateMarkdown(answers, license);
-        console.log("what is license", license);
         //Use user feedback for...
         writeToFile(fileName, readMeInfo);
     
