@@ -64,10 +64,10 @@ function generateMarkdown(answers, license) {
   
   * [Installation](#installation)
   * [Usage](#usage)
-  * [License](license)
-  * [Contributing](contributing)
-  * [Tests](tests)
-  * [Questions](questions)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
   
   ## Installation
   ### To install necessary dependenceies, run the following command:
