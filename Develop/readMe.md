@@ -1,5 +1,5 @@
 
-  # *Readme Generator*
+  # *Professional Readme Generator*
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Description
   ### Creates a readme through node js input
@@ -16,7 +16,7 @@
   ## Installation
   ### To install necessary dependenceies, run the following command:
   
-  * git
+  * git 
   
   ## Usage
   ### nothing

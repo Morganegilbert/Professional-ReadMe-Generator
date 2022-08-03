@@ -138,7 +138,7 @@ const questions = [
 // Function to write README file
 function writeToFile(fileName, readMeInfo) {
     fs.writeFile(fileName, readMeInfo, (err) => 
-    err ? console.log(err) : console.log("Generating readMe...")
+    err ? console.log(err) : console.log("Generating README...")
     )
 }
 
