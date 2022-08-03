@@ -2,7 +2,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require("./utils/generateMarkdown");
-const CheckboxPrompt = require('inquirer/lib/prompts/checkbox');
 
 // TODO: Create an array of questions for user input
 // Questions: Project Title, Description, Table of Contents, 
@@ -67,12 +66,13 @@ const questions = [
     },
     {
         //What kind of license should your project have?
-        type: "checkbox",
+        type: "list",
         name: "license",
         message: "What kind of license should your project have?",
         choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'Mozilla'],
         validate: licenseInput => {
-            if (licenseInput.checked > 1) {
+            console.log("This is my license input", licenseInput);
+            if (licenseInput.prompt > 1) {
                     console.log('Only select one license!');
                     return false;
             } else {
@@ -153,7 +153,7 @@ function init() {
     .then((answers) => {
         console.log(answers);
         let fileName = "readMe.md";
-        let license = answers.license[0];
+        let license = answers.license;
         console.log("This is license in index", license);
         let readMeInfo = generateMarkdown(answers, license);
         console.log("what is license", license);
