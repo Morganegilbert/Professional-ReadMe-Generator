@@ -1,8 +1,8 @@
 
-  # *ReadMe Generator*
+  # *Readme Generator*
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Description
-  ### This project is setup to create a readme through the use of Inquirer, Node JS, and JavaScript
+  ### Creates a readme through node js input
   
   ## Table of Contents
   
@@ -16,10 +16,10 @@
   ## Installation
   ### To install necessary dependenceies, run the following command:
   
-  * Git
+  * git
   
   ## Usage
-  ### Nothing
+  ### nothing
 
   ## License
   ### 
@@ -30,12 +30,12 @@
   ## Contributing
   ### Here is what you need to know to contribute to the repo:
   
-  * Nothing
+  * nothing
 
   ## Tests
   ### To run tests, run the following command: 
   
-  * Git
+  * git
   
   ## Questions
   ### If you have anny questions about the repo, open an issue or contact me directly at morgan.el.gilbert@gmail.com. You can find more of my work at https://github.com/morganegilbert.
